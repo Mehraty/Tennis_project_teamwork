@@ -1,24 +1,17 @@
 # Tennis Match Data Analysis — Bootcamp Project
 
 A data analysis bootcamp project: cleaning and analyzing a raw tennis
-match dataset (season 2024), then answering a set of analytical
+match dataset, then answering a set of analytical
 questions about players, matches, and betting/fan behavior.
 
 ## Team
 
-Three-person team, working on separate branches (`name1`, `name2`,
-`name3` — rename to actual usernames) and merging into `main` via
-Pull Requests.
+A three-person team worked on separate branches (`@YasamanAghaei`, `@mehraty`, `name3`);
+you can view each person's code in the respective branches.
 
 ## ⚠️ About the dataset
 
-**The dataset used in this project is private and is NOT included in
-this repository.** All data files (`*.parquet`, `*.csv`, and the
-working folders `data/`, `tennis_project/`, `cleaned_Yasi/`) are
-excluded via `.gitignore`. To run this project's code, each team
-member must obtain the dataset separately (from the bootcamp/course
-source) and place it locally according to the folder structure below
-— it will never be pushed to this repository.
+The dataset used in this project is private and is not included in this repository. All data files (`*.parquet`, `*.csv`) have been excluded via the `.gitignore` file. Due to the private nature of the data and out of respect for the database creator's privacy, the dataset file will not be made available here, in accordance with their request.
 
 The dataset consists of 15 parquet tables linked by `match_id`,
 covering match results, player info, set scores, tournament/venue
@@ -33,47 +26,44 @@ tennis-data-analysis/
 ├── docs/
 │   └── tennis_dataset_schema.pdf       # full schema documentation
 ├── cleaning/
-│   ├── cleaning_Yasi.ipynb             # cleans event, home/away_team,
-│   │                                    # home/away_team_score, time,
-│   │                                    # tournament, round
-│   ├── cleaning_7_Yasi.ipynb           # cleans statistics, pbp, power,
-│   │                                    # odds, venue, votes, season
-│   ├── final_join.py                   # builds matches_clean.csv /
-│   │                                    # players_clean.csv
-│   └── rules_check_scores.py           # flags matches with impossible
-│                                        # set scores (tennis-rule check)
-├── analysis/
-│   ├── part1_questions_1_2_3_10_12_13_15.ipynb
-│   ├── part1_questions_...ipynb        # remaining part-1 questions
-│   └── part2_bonus_questions.ipynb     # fan votes vs betting market,
-│                                        # aces vs surface/winner, etc.
-└── data/                               # gitignored — place the raw
-                                         # dataset here locally
+│   └── clean_tennis_data_en.py       # Creating 15 tables based on `tennis_dataset_schema.pdf` using the available data.
+│   └── cleaning_7.ipynb
+│                # statistics, pbp, power, odds, venue, votes, season
+│   └── cleaning_8.ipynb
+│                # event, home_team, away_team, home_team_score, away_team_score, time, tournament, round
+│   └── final join.py
+│                # builds matches_clean.csv / players_clean.csv
+|   └── Tennis_Scoring_Rule_Validator.ipynb
+│                # flags matches with impossible
+│                # set scores (tennis-rule check)
+├──  keyvan_hajizadeh
+|   └── Questions: 7, 8, 12, 16, 17 and 2 optional question
+├──  yasaman_aghaei
+|   └── Questions: 3, 4, 5, 6, 9, 11, 14 and 2 optional question
+├──  keyvan_hajizadeh
+|   └── Questions: 1, 2, 10, 13, 15 and 2 optional question
 ```
-
-## How to run
-
-1. Place the raw dataset (15 parquet files) under `data/`.
-2. Run the notebooks in `cleaning/` in order to produce cleaned tables.
-3. Run `cleaning/final_join.py` to build `matches_clean.csv` and
-   `players_clean.csv`.
-4. Run `cleaning/rules_check_scores.py` to flag matches with invalid
-   set scores (used by several downstream analyses).
-5. Run the notebooks in `analysis/` — each answers a specific set of
-   questions and is independent of the others.
 
 ## Questions answered so far
 
 **Part 1 (required questions):**
-- Q1 — Number of unique players, plus an investigation into whether
-  the home/away label is systematically biased for individual players
-- Q2 — Average player height, broken down by gender
-- Q3 — Player with the most wins
-- Q10 — Correlation between height and current ranking
-- Q12 — Average games per set, men vs women (filtered to matches with
-  valid, complete set scores)
-- Q13 — Distribution of right-handed vs left-handed players
-- Q15 — Number of distinct player countries
+1. How many tennis players are included in the dataset? 
+2. What is the average height of the players? 
+3. Which player has the highest number of wins? 
+4. What is the longest match recorded in terms of duration? 
+5. How many sets are typically played in a tennis match? 
+6. Which country has produced the most successful tennis players? 
+7. What is the average number of aces per match? 
+8. Is there a difference in the number of double faults based on gender? 
+9. Which player has won the most tournaments in a single month? 
+10. Is there a correlation between a player's height and their ranking? 
+11. What is the average duration of matches? 
+12. What is the average number of games per set in men's matches compared to women's matches?  
+13. What is the distribution of left-handed versus right-handed players? 
+14. What is the most common type of surface used in tournaments? 
+15. How many distinct countries are represented in the dataset? 
+16. Which player has the highest winning percentage against top 10 ranked opponents? 
+17. What is the average number of breaks of serve per match? 
 
 **Part 2 (bonus / self-designed questions):**
 - Does the match winner tend to hit more aces than the loser?
