@@ -66,12 +66,12 @@ tennis-data-analysis/
 17. What is the average number of breaks of serve per match? 
 
 **Part 2 (bonus / self-designed questions):**
-- Does the match winner tend to hit more aces than the loser?
-- Does court surface affect the number of aces per match?
-- Do fan votes or the betting market predict the winner more
-  accurately?
-- Is fan vote share systematically biased toward the "home" label, or
-  does it reflect genuine ranking differences?
+1- Does the winner usually hit more aces?
+2- Does the court surface affect the number of aces?
+3- Does the match duration depend on the court surface?
+4- Do players' performances change with the court surface (e.g., clay vs. hard court)?
+5- Is the voting share systematically biased toward the home player?
+6- Comparing public/fan opinions with the betting market: which made better predictions?
 
 ## Known data-quality findings
 
@@ -84,7 +84,7 @@ tennis-data-analysis/
   games in a set); investigation traced this to genuine retirements
   concentrated at lower tournament tiers (ITF/Challenger), not a data
   collection bug — see `docs/tennis_dataset_schema.pdf` and
-  `cleaning/rules_check_scores.py` for the full investigation.
+  `cleaning/Tennis_Scoring_Rule_Validator.ipynb` for the full investigation.
 
 ## Tools
 
