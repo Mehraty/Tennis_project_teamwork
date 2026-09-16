@@ -31,7 +31,7 @@ tennis-data-analysis/
 │                # statistics, pbp, power, odds, venue, votes, season
 │   └── cleaning_8.ipynb
 │                # event, home_team, away_team, home_team_score, away_team_score, time, tournament, round
-│   └── final join.py
+│   └── final_join.py
 │                # builds matches_clean.csv / players_clean.csv
 |   └── Tennis_Scoring_Rule_Validator.ipynb
 │                # flags matches with impossible
@@ -40,7 +40,7 @@ tennis-data-analysis/
 |   └── Questions: 7, 8, 12, 16, 17 and 2 optional question
 ├──  yasaman_aghaei
 |   └── Questions: 3, 4, 5, 6, 9, 11, 14 and 2 optional question
-├──  keyvan_hajizadeh
+├──  mehrnoush_yaghoubi
 |   └── Questions: 1, 2, 10, 13, 15 and 2 optional question
 ```
 
@@ -66,12 +66,12 @@ tennis-data-analysis/
 17. What is the average number of breaks of serve per match? 
 
 **Part 2 (bonus / self-designed questions):**
-1- Does the winner usually hit more aces?
-2- Does the court surface affect the number of aces?
-3- Does the match duration depend on the court surface?
-4- Do players' performances change with the court surface (e.g., clay vs. hard court)?
-5- Is the voting share systematically biased toward the home player?
-6- Comparing public/fan opinions with the betting market: which made better predictions?
+1. Does the winner usually hit more aces?
+2. Does the court surface affect the number of aces?
+3. Does the match duration depend on the court surface?
+4. Do players' performances change with the court surface (e.g., clay vs. hard court)?
+5. Is the voting share systematically biased toward the home player?
+6. Comparing public/fan opinions with the betting market: which made better predictions?
 
 ## Known data-quality findings
 
@@ -88,4 +88,4 @@ tennis-data-analysis/
 
 ## Tools
 
-Python 3.12, pandas, pyarrow/fastparquet, numpy, matplotlib, scipy
++Python 3.10, pandas, pyarrow/fastparquet, numpy, matplotlib, scipy
